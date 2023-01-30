@@ -1,5 +1,19 @@
-// El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
-import { sayHello } from './demo.js';
+import { print, add, rest} from './demo';
 
-sayHello();
+
+const card = document.getElementById('card')
+const previuosCard = document.getElementById('previuos-card')
+const nextCard = document.getElementById('next-card')
+
+
+previuosCard.addEventListener('click', () => {
+    rest()
+    print()
+    
+})
+
+nextCard.addEventListener('click', () => {
+    add()
+    print()
+})
